@@ -24,7 +24,7 @@ export function AppSidebar() {
 			isActive: pathname === '/',
 		},
 		{
-			title: 'Product Recommendations',
+			title: 'Gợi ý sản phẩm theo nhóm khách hàng',
 			icon: ShoppingBag,
 			href: '/recommendations',
 			isActive: pathname === '/recommendations',
@@ -42,11 +42,11 @@ export function AppSidebar() {
 			<SidebarContent>
 				<SidebarMenu>
 					{menuItems.map((item) => (
-						<SidebarMenuItem key={item.title}>
+						<SidebarMenuItem key={item.title} className="">
 							<SidebarMenuButton asChild isActive={item.isActive}>
-								<Link to={item.href}>
+								<Link to={item.href} className="h-12">
 									<item.icon className="h-6 w-6" />
-									<span>{item.title}</span>
+									<p>{item.title}</p>
 								</Link>
 							</SidebarMenuButton>
 						</SidebarMenuItem>
